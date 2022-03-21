@@ -83,7 +83,6 @@ Route::get('/ListStudent/Find/{id}', [StudentListController::class, 'findStudent
 Route::post('/Post/ListHW/{idclass}/{idpost}', [ClassroomController::class, 'ListHomeWork'])->name('ListHWP');
 Route::get('/Post/ListHW/{idclass}/{idpost}', [ClassroomController::class, 'ListHomeWork'])->name('ListHWG');
 });
-//Bạch
 Route::get('/', function () {
     return view('Login');
 })->name('Login');
@@ -152,7 +151,6 @@ Route::group(['prefix'=>'/', 'middleware' => ['hocsinh']],function(){
 Route::get('/loadAccount',[AccountController::class,'loadAccount'])->name('loadAccount');
 Route::post('/updateAccount',[AccountController::class,'updateAccount'])->name('updateAccount');
 });
-//Bạch
 Route::get('/', function () {
     return view('/Wellcome');
 })->name('Wellcome')->middleware('logout');
